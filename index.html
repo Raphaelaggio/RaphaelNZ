@@ -14,8 +14,12 @@
             color: #333;
             line-height: 1.6;
         }
-        h1, h2 {
+        h1, h2, h3 {
             color: #005f73;
+            margin: 0;
+        }
+        p {
+            margin: 0 0 15px;
         }
         a {
             color: #ffffff;
@@ -59,16 +63,13 @@
         /* Section Styles */
         section {
             padding: 20px 10%;
-        }
-        .experience .job {
-            margin-bottom: 20px;
             background-color: #fff;
-            padding: 15px;
+            margin: 20px 0;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .experience .job h3 {
-            margin: 0 0 5px;
+        .experience .job {
+            margin-bottom: 20px;
         }
         .experience .skills {
             display: flex;
@@ -84,73 +85,68 @@
             font-size: 0.9em;
         }
 
-        /* Footer Section */
-        .contact {
-            background-color: #005f73;
-            color: white;
-            padding: 20px 10%;
-            text-align: center;
-        }
-
         /* Lifestyle & Values Section */
         #lifestyle-values {
             background-color: #ffdd57;
             color: #005f73;
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
             margin-top: 30px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         #lifestyle-values h3 {
             color: #9c2d2f;
             font-size: 2rem;
             font-weight: bold;
             text-transform: uppercase;
+            margin-bottom: 20px;
         }
         #lifestyle-values p {
             font-size: 1.1rem;
             font-weight: 500;
+            margin-bottom: 20px;
         }
         #lifestyle-values .images {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             gap: 20px;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
         #lifestyle-values .images div {
             text-align: center;
+            flex: 1 1 30%;
         }
         #lifestyle-values .images img,
         #lifestyle-values .images video {
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        #lifestyle-values .images img:hover,
+        #lifestyle-values .images video:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #005f73;
+            color: white;
+            padding: 20px 10%;
+            text-align: center;
         }
 
         /* Responsive Design */
-        @media (max-width: 1024px) {
-            header {
-                padding: 20px 5%;
-            }
-            section {
-                padding: 20px 5%;
-            }
-            .experience .job {
-                padding: 10px;
-            }
-            #lifestyle-values .images {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
                 text-align: center;
             }
-            header .profile {
-                justify-content: center;
+            header img {
+                width: 100px;
+                height: 100px;
             }
             nav a {
                 display: block;
@@ -164,112 +160,10 @@
             }
             #lifestyle-values .images div {
                 margin-bottom: 20px;
+                flex: 1 1 80%;
             }
         }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 14px;
-            }
-            header {
-                padding: 20px 5%;
-            }
-            header img {
-                width: 100px;
-                height: 100px;
-            }
-            nav a {
-                margin: 5px 0;
-                font-size: 1rem;
-            }
-            section {
-                padding: 10px 5%;
-            }
-            #lifestyle-values h3 {
-                font-size: 1.6rem;
-            }
-        }
-
-        /* Lifestyle & Values Section */
-#lifestyle-values {
-    background-color: #ffdd57;  /* Bright yellow for a lively vibe */
-    color: #005f73;
-    padding: 30px;
-    border-radius: 10px;
-    margin-top: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-#lifestyle-values h3 {
-    color: #9c2d2f; /* Bold, eye-catching red */
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-#lifestyle-values p {
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-#lifestyle-values .images {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-#lifestyle-values .images div {
-    text-align: center;
-    flex: 1 1 30%;
-}
-#lifestyle-values .images img,
-#lifestyle-values .images video {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-#lifestyle-values .images img:hover,
-#lifestyle-values .images video:hover {
-    transform: scale(1.05);
-}
-
-/* Mobile Responsiveness for Lifestyle & Values */
-@media (max-width: 768px) {
-    #lifestyle-values h3 {
-        font-size: 1.8rem;
-    }
-    #lifestyle-values .images {
-        flex-direction: column;
-        align-items: center;
-    }
-    #lifestyle-values .images div {
-        margin-bottom: 20px;
-        flex: 1 1 80%;
-    }
-    #lifestyle-values .images img,
-    #lifestyle-values .images video {
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    #lifestyle-values {
-        padding: 20px;
-    }
-    #lifestyle-values h3 {
-        font-size: 1.6rem;
-    }
-    #lifestyle-values .images img,
-    #lifestyle-values .images video {
-        width: 100%;
-    }
-}
     </style>
-
-    
 </head>
 <body>
     <header>
@@ -285,11 +179,12 @@
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
-            <a href="#lifestyle-values">Lifestyle and Values</a>
+            <a href="#lifestyle-values">Lifestyle & Values</a>
             <a href="#publications">Publications</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
+    
     <section id="about">
         <h2>About</h2>
         <p>
@@ -298,6 +193,7 @@
             creative, out-of-the-box strategies. I thrive in environments that foster trust, collaboration, and innovation.
         </p>
     </section>
+
     <section id="experience" class="experience">
         <h2>Work Experience</h2>
         <div class="job">
@@ -336,6 +232,7 @@
             </div>
         </div>
     </section>
+
     <section id="skills">
         <h2>Skills</h2>
         <ul>
@@ -349,7 +246,8 @@
             <li>Scientific Writing</li>
             <li>Teaching</li>
         </ul>
-    </section
+    </section>
+
     <section id="education">
         <h2>Education</h2>
         <ul>
@@ -367,66 +265,68 @@
             </li>
         </ul>
     </section>
+
     <section id="lifestyle-values">
-    <h2>Lifestyle & Values</h2>
-    <div class="values">
-        <h3>Core Values</h3>
-        <ul>
-            <li><strong>Integrity:</strong> Acting with honesty and moral principles.</li>
-            <li><strong>Community:</strong> Building meaningful connections and supporting others.</li>
-            <li><strong>Truth:</strong> Seeking knowledge and clarity in all endeavors.</li>
-            <li><strong>Perseverance:</strong> Overcoming challenges with resilience and determination.</li>
-            <li><strong>Presence:</strong> Fully engaging in the moment with mindfulness and focus.</li>
-        </ul>
-    </div>
-    <div class="lifestyle">
-        <h3>What Keeps Me Moving</h3>
-        <p>Outside of work, my passions fuel my energy and creativity:</p>
-        <div class="images">
-            <div>
-                <img src="surfing.jpeg" alt="Surfing">
-                <p><strong>Surfing:</strong> Connecting with nature and riding the waves!</p>
-            </div>
-            <div>
-                <video controls width="300">
-                    <source src="bjj-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p><strong>Brazilian Jiu-Jitsu:</strong> Discipline, technique, and constant growth as a blue belt.</p>
-            </div>
-            <div>
-                <img src="outdoors.jpg" alt="Outdoor Adventures">
-                <p><strong>Outdoor Adventures:</strong> Exploring the great outdoors with family and friends!</p>
+        <h2>Lifestyle & Values</h2>
+        <div class="values">
+            <h3>Core Values</h3>
+            <ul>
+                <li><strong>Integrity:</strong> Acting with honesty and moral principles.</li>
+                <li><strong>Community:</strong> Building meaningful connections and supporting others.</li>
+                <li><strong>Truth:</strong> Seeking knowledge and clarity in all endeavors.</li>
+                <li><strong>Perseverance:</strong> Overcoming challenges with resilience and determination.</li>
+                <li><strong>Presence:</strong> Fully engaging in the moment with mindfulness and focus.</li>
+            </ul>
+        </div>
+        <div class="lifestyle">
+            <h3>What Keeps Me Moving</h3>
+            <p>Outside of work, my passions fuel my energy and creativity:</p>
+            <div class="images">
+                <div>
+                    <img src="surfing.jpeg" alt="Surfing">
+                    <p><strong>Surfing:</strong> Connecting with nature and riding the waves!</p>
+                </div>
+                <div>
+                    <video controls width="300">
+                        <source src="bjj-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><strong>Brazilian Jiu-Jitsu:</strong> Discipline, technique, and constant growth as a blue belt.</p>
+                </div>
+                <div>
+                    <img src="outdoors.jpg" alt="Outdoor Adventures">
+                    <p><strong>Outdoor Adventures:</strong> Exploring the great outdoors with family and friends!</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
     <section id="publications">
-    <h2>Publications</h2>
-    <p>Here are some of my notable publications in the field of biological sciences, metabolomics, and data analysis:</p>
-    <ul>
-        <li>
-            <strong>Identifying and quantifying metabolites by scoring peaks of GC-MS data</strong> (2014)  
-            Published in BMC Bioinformatics. This paper focuses on improving metabolite quantification using GC-MS data for enhanced biological insights.  
-            <a href="https://doi.org/10.1186/s12859-014-0374-7" target="_blank">Read More</a>
-        </li>
-        <li>
-            <strong>Metab: an R package for high-throughput analysis of metabolomics data</strong> (2011)  
-            Published in Bioinformatics. Introduced a software tool for automating metabolomics data processing.  
-            <a href="https://doi.org/10.1093/bioinformatics/btr379" target="_blank">Read More</a>
-        </li>
-        <li>
-            <strong>Pathway Activity Profiling (PAPi): From metabolite profile to metabolic pathway activity</strong> (2010)  
-            Published in Bioinformatics. Explores pathway activity profiling for analyzing metabolomic data.  
-            <a href="https://link.springer.com/article/10.1007/s11306-010-0235-5" target="_blank">Read More</a>
-        </li>
-        <li>
-            <strong>Analytical platform for metabolome analysis of microbial cells using methyl chloroformate derivatization followed by GC-MS</strong> (2010)  
-            Published in Nature Protocols. Highlights a robust metabolomics method for microbial cell analysis.  
-            <a href="https://www.nature.com/articles/nprot.2010.160" target="_blank">Read More</a>
-        </li>
-    </ul>
-</section>
+        <h2>Publications</h2>
+        <p>Here are some of my notable publications in the field of biological sciences, metabolomics, and data analysis:</p>
+        <ul>
+            <li>
+                <strong>Identifying and quantifying metabolites by scoring peaks of GC-MS data</strong> (2014)  
+                Published in BMC Bioinformatics. This paper focuses on improving metabolite quantification using GC-MS data for enhanced biological insights.  
+                <a href="https://doi.org/10.1186/s12859-014-0374-7" target="_blank">Read More</a>
+            </li>
+            <li>
+                <strong>Metab: an R package for high-throughput analysis of metabolomics data</strong> (2011)  
+                Published in Bioinformatics. Introduced a software tool for automating metabolomics data processing.  
+                <a href="https://doi.org/10.1093/bioinformatics/btr379" target="_blank">Read More</a>
+            </li>
+            <li>
+                <strong>Pathway Activity Profiling (PAPi): From metabolite profile to metabolic pathway activity</strong> (2010)  
+                Published in Bioinformatics. Explores pathway activity profiling for analyzing metabolomic data.  
+                <a href="https://link.springer.com/article/10.1007/s11306-010-0235-5" target="_blank">Read More</a>
+            </li>
+            <li>
+                <strong>Analytical platform for metabolome analysis of microbial cells using methyl chloroformate derivatization followed by GC-MS</strong> (2010)  
+                Published in Nature Protocols. Highlights a robust metabolomics method for microbial cell analysis.  
+                <a href="https://www.nature.com/articles/nprot.2010.160" target="_blank">Read More</a>
+            </li>
+        </ul>
+    </section>
 
     <footer class="contact" id="contact">
         <h2>Contact</h2>
@@ -436,5 +336,3 @@
     </footer>
 </body>
 </html>
-
-
