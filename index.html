@@ -5,71 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raphael Aggio - Personal Website</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
             color: #333;
             line-height: 1.6;
         }
-        header {
-            background-color: #005f73;
-            color: white;
-            padding: 20px 10%;
-            text-align: center;
+        h1, h2 {
+            color: #005f73;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            margin: 5px 0 0;
-            font-size: 1.2em;
-        }
-        nav {
-            margin: 10px 0;
-        }
-        nav a {
-            color: #e6f4f1;
+        a {
+            color: #005f73;
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
         }
-        nav a:hover {
+        a:hover {
             text-decoration: underline;
         }
-        section {
-            padding: 20px 10%;
-        }
-        h2 {
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-        }
         ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
         }
         ul li {
             margin-bottom: 10px;
         }
+
+        /* Header Section */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #005f73;
+            color: white;
+            padding: 20px 10%;
+        }
+        header .profile {
+            display: flex;
+            align-items: center;
+        }
+        header img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-right: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 20px 10%;
+        }
+        .experience .job {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .experience .job h3 {
+            margin: 0 0 5px;
+        }
+        .experience .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .experience .skills span {
+            background-color: #e6f4f1;
+            color: #005f73;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        /* Footer Section */
         .contact {
             background-color: #005f73;
             color: white;
             padding: 20px 10%;
             text-align: center;
         }
-        .contact a {
-            color: #e6f4f1;
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Raphael Aggio</h1>
-        <p>Problem Solver | Researcher | Data Analyst</p>
+        <div class="profile">
+            <img src="profile.jpg" alt="Raphael Aggio's Photo">
+            <div>
+                <h1>Raphael Aggio</h1>
+                <p>Problem Solver | Researcher | Data Analyst</p>
+            </div>
+        </div>
         <nav>
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
@@ -81,19 +113,48 @@
     <section id="about">
         <h2>About</h2>
         <p>
-            I am deeply passionate about understanding how things work—whether it's optimizing systems or finding innovative solutions to fix what’s broken.
-            With a strong foundation in biology, research, and data analysis, combined with a diverse skill set, I excel at seeing the bigger picture and devising
+            I am deeply passionate about understanding how things work—whether it's optimizing systems or finding innovative solutions to fix what’s broken. 
+            With a strong foundation in biology, research, and data analysis, combined with a diverse skill set, I excel at seeing the bigger picture and devising 
             creative, out-of-the-box strategies. I thrive in environments that foster trust, collaboration, and innovation.
         </p>
     </section>
-    <section id="experience">
+    <section id="experience" class="experience">
         <h2>Work Experience</h2>
-        <ul>
-            <li><strong>Senior Research and Data Analyst</strong> - Ministry of Business, Innovation and Employment (2016–2022)</li>
-            <li><strong>Research Associate</strong> - University of Liverpool, UK (2013–2016)</li>
-            <li><strong>PhD, Lecturer, Research Assistant</strong> - University of Auckland, NZ (2008–2013)</li>
-            <li><strong>Electronic Technician</strong> - Philips do Brasil, Brazil (1999–2004)</li>
-        </ul>
+        <div class="job">
+            <h3>Senior Research and Data Analyst</h3>
+            <p><strong>Ministry of Business, Innovation and Employment</strong> | 2016–2022</p>
+            <p>Developed research projects to inform key stakeholders, including government ministers, conceptualized and managed projects such as the Sustainability Dashboard and the Tourism Insights Centre, and maintained large-scale SQL databases for regional economic activity.</p>
+            <div class="skills">
+                <span>Research</span>
+                <span>Data Analysis</span>
+                <span>Project Management</span>
+                <span>Stakeholder Communication</span>
+                <span>Innovation</span>
+            </div>
+        </div>
+        <div class="job">
+            <h3>Research Associate</h3>
+            <p><strong>University of Liverpool</strong> | 2013–2016</p>
+            <p>Optimized pipelines for metabolomics, modeled biological data to classify diseases, and supervised master’s students while teaching and publishing research in cancer diagnostics.</p>
+            <div class="skills">
+                <span>Metabolomics</span>
+                <span>Data Modeling</span>
+                <span>Supervision</span>
+                <span>Teaching</span>
+                <span>Innovation</span>
+            </div>
+        </div>
+        <div class="job">
+            <h3>PhD, Lecturer, Research Assistant</h3>
+            <p><strong>University of Auckland</strong> | 2008–2013</p>
+            <p>Conducted groundbreaking research in metabolomics, taught undergraduate biology courses, and published a PhD thesis with a focus on innovative biological data analysis techniques.</p>
+            <div class="skills">
+                <span>Research</span>
+                <span>Teaching</span>
+                <span>Scientific Writing</span>
+                <span>Innovation</span>
+            </div>
+        </div>
     </section>
     <section id="skills">
         <h2>Skills</h2>
@@ -101,10 +162,9 @@
             <li>Research</li>
             <li>Data Analysis</li>
             <li>Web Development</li>
-            <li>Innovation</li>
             <li>Leadership</li>
-            <li>Effective Communication</li>
             <li>Critical Thinking</li>
+            <li>Effective Communication</li>
         </ul>
     </section>
     <section id="education">
