@@ -14,7 +14,7 @@
             color: #333;
             line-height: 1.6;
         }
-        h1, h2 {
+        h1, h2, h3 {
             color: #005f73;
         }
         a {
@@ -60,28 +60,20 @@
         section {
             padding: 20px 10%;
         }
-        .experience .job {
+        .values, .lifestyle {
             margin-bottom: 20px;
-            background-color: #fff;
-            padding: 15px;
+        }
+        .lifestyle img {
+            width: 100%;
+            max-width: 300px;
+            margin-right: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .experience .job h3 {
-            margin: 0 0 5px;
-        }
-        .experience .skills {
+        .lifestyle .images {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .experience .skills span {
-            background-color: #e6f4f1;
-            color: #005f73;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.9em;
+            gap: 15px;
         }
 
         /* Footer Section */
@@ -107,7 +99,7 @@
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
-            <a href="#hobbies">Hobbies</a>
+            <a href="#lifestyle-values">Lifestyle & Values</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -121,82 +113,50 @@
     </section>
     <section id="experience" class="experience">
         <h2>Work Experience</h2>
-        <div class="job">
-            <h3>Senior Research and Data Analyst</h3>
-            <p><strong>Ministry of Business, Innovation and Employment</strong> | 2016–2022</p>
-            <p>Developed research projects to inform key stakeholders, including government ministers, conceptualized and managed projects such as the Sustainability Dashboard and the Tourism Insights Centre, and maintained large-scale SQL databases for regional economic activity.</p>
-            <div class="skills">
-                <span>Research</span>
-                <span>Data Analysis</span>
-                <span>Project Management</span>
-                <span>Stakeholder Communication</span>
-                <span>Innovation</span>
-            </div>
-        </div>
-        <div class="job">
-            <h3>Research Associate</h3>
-            <p><strong>University of Liverpool</strong> | 2013–2016</p>
-            <p>Optimized pipelines for metabolomics, modeled biological data to classify diseases, and supervised master’s students while teaching and publishing research in cancer diagnostics.</p>
-            <div class="skills">
-                <span>Metabolomics</span>
-                <span>Data Modeling</span>
-                <span>Supervision</span>
-                <span>Teaching</span>
-                <span>Innovation</span>
-            </div>
-        </div>
-                <div class="job">
-            <h3>PhD, Lecturer, Research Assistant</h3>
-            <p><strong>University of Auckland</strong> | 2008–2013</p>
-            <p>Conducted groundbreaking research in metabolomics, taught undergraduate biology courses, and published a PhD thesis with a focus on innovative biological data analysis techniques.</p>
-            <div class="skills">
-                <span>Research</span>
-                <span>Teaching</span>
-                <span>Scientific Writing</span>
-                <span>Innovation</span>
-            </div>
-        </div>
+        <!-- Work experience sections from earlier -->
     </section>
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>Research</li>
-            <li>Data Analysis</li>
-            <li>Web Development</li>
-            <li>Leadership</li>
-            <li>Critical Thinking</li>
-            <li>Effective Communication</li>
-            <li>Project Management</li>
-            <li>Scientific Writing</li>
-            <li>Teaching</li>
+            <!-- Skills list from earlier -->
         </ul>
     </section>
     <section id="education">
         <h2>Education</h2>
         <ul>
-            <li>
-                <strong>PhD in Biological Sciences</strong> - University of Auckland, NZ (2009–2013)<br>
-                A world-leading institution in research and education, ranked in the top 100 globally. Specializing in metabolomics, data analysis, and innovative biological research.
-            </li>
-            <li>
-                <strong>BSc in Biological Sciences</strong> - Santa Catarina Federal University, Brazil (2004–2008)<br>
-                Recognized as one of Brazil's top universities, offering cutting-edge research opportunities in biological and environmental sciences.
-            </li>
-            <li>
-                <strong>Certified Electronic Technician</strong> - ETEGV, Brazil (1995–1999)<br>
-                Esteemed technical school providing high-quality education in electronic systems and telecommunication technologies.
-            </li>
+            <!-- Education details from earlier -->
         </ul>
     </section>
-    <section id="hobbies">
-        <h2>Hobbies</h2>
-        <p>I enjoy engaging in activities that bring me balance, growth, and joy:</p>
-        <ul>
-            <li><strong>Surfing:</strong> Embracing the waves and nature's rhythm.</li>
-            <li><strong>Brazilian Jiu Jitsu:</strong> A blue belt practitioner, continuously improving discipline and technique.</li>
-            <li><strong>Helping Others:</strong> Supporting and mentoring people in achieving their goals.</li>
-            <li><strong>Spending Time in Nature:</strong> Cherishing moments with family and friends outdoors, fostering deep connections and appreciation for the environment.</li>
-        </ul>
+    <section id="lifestyle-values">
+        <h2>Lifestyle & Values</h2>
+        <div class="values">
+            <h3>Values</h3>
+            <ul>
+                <li><strong>Integrity:</strong> Acting with honesty and moral principles.</li>
+                <li><strong>Community:</strong> Building meaningful connections and supporting others.</li>
+                <li><strong>Truth:</strong> Seeking knowledge and clarity in all endeavors.</li>
+                <li><strong>Perseverance:</strong> Overcoming challenges with resilience and determination.</li>
+                <li><strong>Presence:</strong> Fully engaging in the moment with mindfulness and focus.</li>
+            </ul>
+        </div>
+        <div class="lifestyle">
+            <h3>Lifestyle</h3>
+            <p>In my free time, I dedicate myself to activities that balance my mind, body, and soul:</p>
+            <div class="images">
+                <div>
+                    <img src="surfing.jpg" alt="Surfing">
+                    <p><strong>Surfing:</strong> Connecting with nature and the rhythm of the waves.</p>
+                </div>
+                <div>
+                    <img src="bjj.jpg" alt="Brazilian Jiu-Jitsu">
+                    <p><strong>Brazilian Jiu-Jitsu:</strong> Practicing discipline and technique as a blue belt.</p>
+                </div>
+                <div>
+                    <img src="outdoors.jpg" alt="Outdoor Time">
+                    <p><strong>Outdoor Time:</strong> Enjoying nature with family and friends.</p>
+                </div>
+            </div>
+        </div>
     </section>
     <footer class="contact" id="contact">
         <h2>Contact</h2>
@@ -206,5 +166,3 @@
     </footer>
 </body>
 </html>
-
-
